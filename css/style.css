@@ -1,0 +1,127 @@
+#page1{
+  width:100%;
+  background : #000   no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:none;
+  font-family: 'Shadows Into Light';
+}
+#title{
+  text-shadow: 2px 2px #ff0000;
+  color:#fff;
+  position :absolute;
+  z-index: 10;
+  left:39%;
+  font-size: 120px;
+  top:130px;
+}
+#subtitle{
+  text-shadow: 2px 2px #f00;
+  position: absolute;
+  z-index: 10;
+  font-size: 36px;
+  left:43%;
+  color: #fff;
+  top:280px;
+}
+#page2{
+  top:500px;
+  margin-left: 0px;
+  width:100%;
+  background : #cc6699 no-repeat fixed center;
+  color:#fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:auto;
+  font-size: 50px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.section {
+  background-color: #aaf;
+  text-align:center;
+}
+#section0,
+#section1,
+#section2,
+#section3{
+    background-size: cover;
+}
+.mySlides{
+display:none;
+}
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button1{
+  padding: 15px 74px;
+  background-color: #09f;
+  top:430px;
+  left:43.3%;
+}
+.button1:hover {
+    background-color: #ff33cc;
+    color: white;
+}
+
+.button2{
+  padding: 15px 80px;
+  background-color: #09f;
+  color: #fff;
+  top:520px;
+  left:43.3%;
+}
+.button2:hover {
+  background-color: #ff33cc;
+  color: white;
+}
+.blue {
+  background: #000;
+}
+.box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  left:37.5%;
+  top:350px;
+  width: 25%;
+  height: 280px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+.screenshot{
+  position: absolute;
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#s1{
+
+}
+#s2{
+  left:500px;
+}
+#s3{
+  top:500px;
+}
+#topic{
+  font-family: 'Josefin Sans';
+  font-size: 40px;
+  text-decoration: underline;
+  position:absolute;
+  left: 100px;
+  top : 20px;
+}
