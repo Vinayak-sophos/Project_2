@@ -20,5 +20,23 @@
             }
         }
         
+        function my_items() {
+            $sql = "SELECT * FROM items WHERE id=".$_SESSION["id"];
+            $result = mysqli_query($this->conn, $sql);
+            if ($result == false) {
+                return false;
+            }
+            return mysqli_fetch_assoc($result);
+        }
+        
+        function add_item_db($arguments) {
+            $sql = "INSERT INTO items (seller_id, item_name) VALUES (".$arguments['id'].", '".$arguments['item_name']."')";
+            $result = mysqli_query($this->conn, $sql);
+            if ($result == false) {
+                return false;
+            }
+            return true;
+        }
+        
     }
 ?>

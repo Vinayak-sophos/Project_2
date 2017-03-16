@@ -9,7 +9,7 @@
 
     function loadView($view, $data = []) {
         
-        extract($data);
+        @extract($data);
         
         $view_path = VIEW_PATH.$view.'.php';
         if (!file_exists($view_path)) {

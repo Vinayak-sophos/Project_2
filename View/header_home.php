@@ -3,4 +3,7 @@
         <title><?php echo($title); ?></title>
     </head>
     <body>
-        <?php echo($id); echo($name); echo($college); echo($email); echo($gender); echo($password); ?>
+        <h1>Welcome, <?php echo($name); ?>!</h1>
+        <a href="<?php echo(generate_url('store', 'add_items')); ?>">Sell Item</a><br/>
+        <a href="<?php echo(generate_url('store', 'store')); ?>">Go to Store</a><br/>
+        <a href="<?php echo(generate_url('personalize', 'logout')); ?>">Logout</a><br/>
