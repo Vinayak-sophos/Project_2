@@ -15,8 +15,8 @@
         function home() {
             $this->info["title"] = "Dashboard";
             loadView("header_home", $this->info);
-            $data = loadModel("store", "my_items");
-            loadView("my_items", $data);
+            $data = loadModel("store", "my_items", $this->info);
+            loadView("my_items", array_merge($data, $this->info));
             loadView("footer");
         }
         
@@ -29,7 +29,7 @@
         }
         
         function add_items() {
-            $info["title"] = "Add Items to store";
+            $this->info["title"] = "Add Items";
             loadView("header_home", $this->info);
             loadView("add_item_form");
             loadView("footer");
@@ -41,6 +41,18 @@
                 redirect("store", "add_item_form");
             }
             redirect("store", "home");
+        }
+        
+        function remove($arguments) {
+            loadModel("store", "remove", $arguments);
+            redirect("store", "home");
+        }
+        
+        function contact_seller($arguments) {
+            loadView("header_home", $this->info);
+            $data = loadModel("store", "contact_seller", $arguments);
+            loadView("contact_seller", $data);
+            loadView("footer");
         }
         
     }

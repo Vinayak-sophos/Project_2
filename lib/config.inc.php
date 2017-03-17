@@ -6,10 +6,11 @@
     define('CONTROLLER_PATH', SITE_ROOT.'Controller/');
     define('JS_PATH', '/js/');
     define('CSS_PATH', '/css/');
+    define('UPLOAD_PATH', '/uploads/');
 
     function loadView($view, $data = []) {
         
-        @extract($data);
+        @extract($data, EXTR_PREFIX_INVALID, "num");
         
         $view_path = VIEW_PATH.$view.'.php';
         if (!file_exists($view_path)) {

@@ -1,9 +1,10 @@
+<h1>Login Form</h1>
 <form method="post" action="<?php echo(generate_url("personalize", "login")); ?>">
         <div>
-            <input autocomplete="on" name="email" placeholder="E-mail" type="email"/>
+            E-mail address: <input autocomplete="on" name="email" placeholder="E-mail" type="email"/>
         </div>
         <div>
-            <input name="password" placeholder="Password" type="password"/>
+            Password: <input name="password" placeholder="Password" type="password"/>
         </div>
         <div>
             <button type="submit">

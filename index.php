@@ -24,7 +24,7 @@
             die($function." function not found in controller ".$controller);
         }
         $obj = new $controller;
-        $obj->$function($_POST);
+        $obj->$function(array_merge($_POST, $_GET, $_FILES));
     }
     else{
         die($controller.' controller not found');
