@@ -1,10 +1,10 @@
 <h1>Register Form</h1>
 <form action="<?php echo(generate_url("personalize", "register")); ?>" method="post">
       <div>
-        E-mail address: <input autocomplete="on" name="name" placeholder="First Name" type="text"/>
+        First Name: <input autocomplete="on" name="name" placeholder="First Name" type="text"/>
       </div>
       <div>
-        First Name: <input autocomplete="on" name="email" placeholder="E-mail Address" type="email"/>
+        E-mail address: <input autocomplete="on" name="email" placeholder="E-mail Address" type="email"/>
       </div>
       College: 
       <select name="college">
