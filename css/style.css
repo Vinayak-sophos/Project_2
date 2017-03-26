@@ -78,9 +78,8 @@ display:none;
     background-color: #ff33cc;
     color: white;
 }
-
 .button2{
-  padding: 15px 80px;
+  padding: 0px 85px;
   background-color: #09f;
   color: #fff;
   top:520px;
@@ -124,4 +123,24 @@ display:none;
   position:absolute;
   left: 100px;
   top : 20px;
+}
+#email1{
+ height: 200px;
+    width: 400px;
+    background: lightgreen ;
+    margin: 100px auto 0;
+}
+input[type=text], input[type=password], input[type=email] {
+    font-size: 15px;
+    background : #fff;
+    height: 32px;
+    width:250px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} 
+.name{
+  
 }
