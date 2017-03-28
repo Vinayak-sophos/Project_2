@@ -1,3 +1,4 @@
+
 #page1{
   width:100%;
   background : #000   no-repeat fixed center;
@@ -5,7 +6,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow:none;
+  overflow:auto;
   font-family: 'Shadows Into Light';
 }
 #title{
@@ -13,9 +14,9 @@
   color:#fff;
   position :absolute;
   z-index: 10;
-  left:39%;
+  left:38%;
   font-size: 120px;
-  top:130px;
+  top:15%;
 }
 #subtitle{
   text-shadow: 2px 2px #f00;
@@ -24,7 +25,7 @@
   font-size: 36px;
   left:43%;
   color: #fff;
-  top:280px;
+  top:34%;
 }
 #page2{
   top:500px;
@@ -71,7 +72,7 @@ display:none;
 .button1{
   padding: 15px 74px;
   background-color: #09f;
-  top:430px;
+  top:50%;
   left:43.3%;
 }
 .button1:hover {
@@ -79,10 +80,9 @@ display:none;
     color: white;
 }
 .button2{
-  padding: 0px 85px;
+  padding: 15px 80px;
   background-color: #09f;
-  color: #fff;
-  top:520px;
+  top:60%;
   left:43.3%;
 }
 .button2:hover {
@@ -90,7 +90,7 @@ display:none;
   color: white;
 }
 .blue {
-  background: #000;
+  background: #fff;
 }
 .box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
