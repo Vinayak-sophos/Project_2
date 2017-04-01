@@ -20,13 +20,21 @@
         }
         
         function validate($arguments = []) {
+            if (!isset($arguments['email']) || empty($arguments['email']) || !isset($arguments['password']) || empty($arguments['password'])) return false;
+            if (isset($arguments['name'])) {
+                if (empty($arguments['name']) || empty($arguments['college']) || empty($arguments['confirmation']) || empty($arguments['gender'])
+                || !isset($arguments['name']) || !isset($arguments['college']) || !isset($arguments['confirmation']) || !isset($arguments['gender'])) {
+                    return false;
+                }
+                else if ($arguments['password'] != $arguments['confirmation']) return false;
+            }
             return true;
         }
         
         function register($arguments) {
             if (!$this->validate($arguments)) return false;
-            $sql = "INSERT INTO users (name, college, email, gender, password) VALUES ('".$arguments['name']."', '".$arguments['college']."', 
-            '".$arguments['email']."', '".$arguments['gender']."', '".password_hash($arguments['password'], PASSWORD_BCRYPT)."')";
+            $sql = "INSERT INTO users (name, college, email, gender, password, balance) VALUES ('".$arguments['name']."', '".$arguments['college']."', 
+            '".$arguments['email']."', '".$arguments['gender']."', '".password_hash($arguments['password'], PASSWORD_BCRYPT)."', 1000)";
             $result = mysqli_query($this->conn, $sql);
             if (!$result) return false;
             session_start();
@@ -58,6 +66,11 @@
             $result = mysqli_query($this->conn, $sql);
             $row = mysqli_fetch_assoc($result);
             return $row;
+        }
+        
+        function deposit($arguments) {
+            $sql = "UPDATE users SET balance=balance+".$arguments['deposit']." WHERE id=".$_SESSION['id'];
+            mysqli_query($this->conn, $sql);
         }
         
     }

@@ -62,11 +62,11 @@ body{
 <form method="post" action="<?php echo(generate_url("personalize", "login")); ?>">
         <!--<div style="posiiton : absolute; margin-left:41.5%; margin-top:20%;">-->
         <div id = "em">    
-            <input autocomplete="on" name="email" placeholder="E-mail" type="email" width = "50px" height = "10px"/>
+            <input autocomplete="on" name="email" placeholder="E-mail" type="email" width = "50px" height = "10px" required/>
         </div>
         <div id = "pass">
         <!--<div style = "posiiton : absolute; margin-left:41.5%; margin-top:.5%;">-->
-            <input name="password" placeholder="Password" type="password" width = "50px" height = "10px"/>
+            <input name="password" placeholder="Password" type="password" width = "50px" height = "10px" required/>
         </div>
         <div>
             <button type="submit" class = "button button3">

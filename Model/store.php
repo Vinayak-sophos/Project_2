@@ -12,8 +12,27 @@
         }
         
         function getData($arguments) {
+            $sql = "";
             if (isset($arguments['id'])) {
-                $sql = "SELECT * FROM items WHERE seller_id=".$arguments['id'];
+                $id = $arguments['id'];
+                $sql = "SELECT * FROM items WHERE seller_id=".$id;
+            }
+            else if (isset($arguments['q'])) {
+                $q = $arguments['q'];
+                $sql = "SELECT * FROM items WHERE item_name LIKE '%".$q."%' OR description LIKE '%".$q."%'
+                OR category LIKE '%".$q."%' OR college LIKE'%".$q."%'";
+            }
+            else if (isset($arguments['category'])) {
+                $category = $arguments['category'];
+                $sql = "SELECT * FROM items WHERE category='".$category."'";
+            }
+            else if (isset($arguments['college'])) {
+                $college = $arguments['college'];
+                $sql = "SELECT * FROM items WHERE college='".$college."'";
+            }
+            else if(isset($arguments['item_id'])) {
+                $item_id = $arguments['item_id'];
+                $sql = "SELECT * FROM items WHERE item_id=".$item_id;
             }
             else {
                 $sql = "SELECT * FROM items";
@@ -83,6 +102,12 @@
         }
         
         function add_item_db($arguments) {
+            if (!isset($arguments['category']) || empty($arguments['category']) || !isset($arguments['item_name']) ||
+            empty($arguments['item_name']) || !isset($arguments['description']) || empty($arguments['description']) ||
+            !isset($arguments['contact']) || empty($arguments['contact']) || !isset($arguments['choice']) ||
+            empty($arguments['choice']) || !isset($arguments['price']) || empty($arguments['price']) ||
+            !isset($arguments['fileToUpload']) || empty($arguments['fileToUpload'])) return false;
+            if (!is_numeric($arguments['contact']) || !is_numeric($arguments['price'])) return false;
             $img_name = $this->upload($arguments);
             $sql = "INSERT INTO items (seller_id, item_name, description, contact, choice, price, image, date, category, college) VALUES ("
             .$arguments['id'].", '".$arguments['item_name']."', '".$arguments['description']."', '".$arguments['contact']."', '".$arguments['choice']."', 
@@ -99,7 +124,7 @@
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
             $row = mysqli_fetch_assoc($result);
             $dir = getcwd().DIRECTORY_SEPARATOR."uploads/";
-            if (file_exists($dir.$row['image'])) unlink($dir.$row['image']) or die('Error in deleting record');
+            // if (file_exists($dir.$row['image'])) unlink($dir.$row['image']) or die('Error in deleting record');
             $sql = "DELETE FROM items WHERE item_id=".$arguments['item_id'];
             mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
         }
@@ -112,6 +137,29 @@
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
             $row = array_merge($row, mysqli_fetch_assoc($result));
             return $row;
+        }
+        
+        function cart() {
+            $sql = "SELECT * FROM cart WHERE user_id=".$_SESSION['id'];
+            $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            $rows = [];
+            while($row = mysqli_fetch_assoc($result)) array_push($rows, $row);
+            $rows["len"] = mysqli_num_rows($result);
+            return $rows;
+        }
+        
+        function buy($arguments) {
+            $sql = "SELECT * FROM items WHERE item_id=".$arguments['item_id'];
+            $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            $row = mysqli_fetch_assoc($result);
+            if (intval($row['price']) > intval($arguments['balance'])) return null;
+            $sql = "UPDATE users SET balance=balance-".intval($row['price'])." WHERE id=".$_SESSION['id'];
+            mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            $sql = "INSERT INTO cart (user_id, image, item_name, price, category) VALUES(".$_SESSION['id'].", '".$row['image']."',
+            '".$row['item_name']."', ".$row['price'].", '".$row['category']."')";
+            $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            $this->remove($arguments);
+            return 1;
         }
         
     }

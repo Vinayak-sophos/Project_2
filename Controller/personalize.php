@@ -17,7 +17,10 @@
         function login($arguments) {
             $ack = loadModel("personalize", "login", $arguments);
             if ($ack == false) {
-                redirect("personalize", "login_form");
+                echo('Please enter valid credentials');
+                echo("<br/>Redirecting in 5 seconds....");
+                header("Refresh:5; url=".generate_url('personalize', 'login_form'));
+                exit();
             }
             redirect("store", "home");
         }
@@ -31,7 +34,10 @@
         function register($arguments) {
             $ack = loadModel("personalize", "register", $arguments);
             if ($ack == false) {
-                redirect("personalize", "register_form");
+                echo('Please enter valid credentials');
+                echo("<br/>Redirecting in 5 seconds....");
+                header("Refresh:5; url=".generate_url('personalize', 'register_form'));
+                exit();
             }
             redirect("store", "home");
         }
@@ -40,5 +46,6 @@
             loadModel("personalize", "logout");
             redirect("guide", "initial");
         }
+        
     }
 ?>

@@ -14,7 +14,10 @@
         
         $view_path = VIEW_PATH.$view.'.php';
         if (!file_exists($view_path)) {
-            die($view.' view not found');
+            echo($view.' view not found');
+            echo("<br/>Redirecting in 5 seconds....");
+            header("Refresh:5; url=/");
+            exit();
         }
         
         require_once($view_path);
@@ -25,7 +28,10 @@
         
         $model_path = MODEL_PATH.$model.'.php';
         if (!file_exists($model_path)) {
-            die($model.' model not found');
+            echo($model.' model not found');
+            echo("<br/>Redirecting in 5 seconds....");
+            header("Refresh:5; url=/");
+            exit();
         }
         
         require_once($model_path);
@@ -33,7 +39,10 @@
         $modelClass = $model.'Model';
         
         if (!method_exists($modelClass, $function)) {
-            die($function.' function not found in model '.$model);
+            echo($function.' function not found in model '.$model);
+            echo("<br/>Redirecting in 5 seconds....");
+            header("Refresh:5; url=/");
+            exit();
         }
         
         $obj = new $modelClass;
