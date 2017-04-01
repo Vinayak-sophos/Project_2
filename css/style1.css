@@ -1,44 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    background-color: #030;
+    background-color: rgb(100, 100, 100)
     
 }
+
 body{
-    padding : 0px;
+    margin : 0;
+    padding : 0;
+}
+#navigation{
+    margin : 0;
+    padding:0;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 li {
-    float: left;
+    float:right;
+    padding : 2px 10px 2px 10px;
 }
-#lgout{
-    float: right;
-}
+
 li a {
     display: block;
     color: #fff;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    
 }
-
+.name:hover{
+    color : #69f;
+}
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #69f;
+    color: #69f;
 }
 .name{
     position : absolute;
-    top:-.5%;
+    top:1%;
     left:60%;
     color:#fff;
-    font-size:10px;
-}
-a.name:link{
-    color:#fff;
+    font-size:1.25em;
 }
 a:link {
     text-decoration: none;
+}
+#icon{
+    float : left;
+    padding:0px;
+    font-family: 'Shadows Into Light';
+    text-shadow: 2px 2px #ff0000;
+    color:#fff;
+    font-size:1.8em;
 }
