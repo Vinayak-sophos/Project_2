@@ -67,7 +67,10 @@
     }
 </script>
 
+
+    <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style2.css">
 <!-- // show data and links for contact seller -->
+<div id = "headstore">
 <h3><?php if (!$len) {
     echo("Sorry, no item found, <a href='".generate_url("store", "add_items")."'>Add Items</a>");
     exit;
@@ -77,26 +80,32 @@
 else {
     echo("Showing {$len} results");
 } ?></h3>
-<table>
-    <tr><th>Image</th><th>Title</th><th>Price</th><th>College</th><th>Category</th><th>Date</th><th>Info</th></tr>
+</div>
+    <!--<tr><th>Image</th><th>Title</th><th>Price</th><th>College</th><th>Category</th><th>Date</th><th>Contact Seller</th></tr>-->
+
     <?php for($i = 0; $i < $len; $i++){
         $name = "num_".$i;
-        echo("<tr>
-                <td>
-                    <a class=\"lightbox\" href=\"#full\">
-                        <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' width='70px' height='70px' />
-                    </a>
-                    <div class=\"lightbox-target\" id=\"full\">
-                        <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' />
-                    <a class=\"lightbox-close\" href=\"#\"></a>
+        echo("  <div class = \"element\">    
+                    <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' width='70px' height='70px'/>
+                    <div class=\"desc-div\">
+                        <div id = \"name\">
+                            <b>{${$name}['item_name']}</b>({${$name}['category']})
+                        </div>
+                        <div id = \"price\">
+                            Price - Rs. {${$name}['price']}
+                        </div>
+                        <div id = \"clg\">
+                            College - {${$name}['college']}
+                        </div>
+                        <div id = \"con\">
+                            <a href='".generate_url('store', 'contact_seller')."&item_id={${$name}['item_id']}'>Contact Seller</a>
+                        </div>
                     </div>
-                </td>
-                <td>{${$name}['item_name']}</td>
-                <td>{${$name}['price']}</td>
-                <td>{${$name}['college']}</td>
-                <td>{${$name}['category']}</td>
-                <td>{${$name}['date']}</td>
-                <td><a href='".generate_url('store', 'more_info')."&item_id={${$name}['item_id']}'>More Info</a></td>
-            </tr>");
+
+            ");
     } ?>
-</table>
+                 <hr class = \"horizontal\">
+                
+        
+</body>
+
