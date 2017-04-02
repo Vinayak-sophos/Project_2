@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+body{
+  background-color : #c6f;
+}
+#title{
+  position : absolute;
+  top:32%;
+  left : 42%;
+}
+#desc{
+  position:absolute;
+  top:42%;
+  left:42%;
+}
+#category{
+   position:absolute;
+   top:39%;
+   left:42%;
+}
+#contact{
+  position : absolute;
+  top :49%;
+  left : 42%;
+}
+#radio{
+  position : absolute;
+  top :56%;
+  left : 41%;
+}
+#price{
+  position : absolute;
+  top :60%;
+  left : 42%;
+}
+#upload{
+  position : absolute;
+  top :67%;
+  left : 45%;
+}
+#add{
+  position : absolute;
+  top :71%;
+  left : 42%;
+}
+.button3{
+  position : absolute;
+  padding: 4px 110px;
+  background-color: #09f;
+  top:55%;
+  left:42%;
+}
+.button3:hover {
+    background-color: #ff33cc;
+    color: white;
+}
+input[type=text], input[type=password], input[type=email] {
+    font-size: 15px;
+    background : #fff;
+    height: 42px;
+    width:250px;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+#headname{
+    position : absolute;
+    left:38%;
+    top:10%;
+    padding:0px;
+    font-family: 'Shadows Into Light';
+    text-shadow: 2px 2px #f00;
+    color:#fff;
+    font-size:7em;
+}
