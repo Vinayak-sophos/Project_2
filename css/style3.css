@@ -4,7 +4,10 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 body{
-    background-color:#c9f;
+    background-color:#ff9;
+}
+.notnavigation{
+    padding-top:3%;
 }
 .desc-div{
     position: absolute;
@@ -23,7 +26,7 @@ body{
     /*margin-left:14%;*/
     font-family: 'PT Sans', sans-serif;
 }
-#date{
+#date{    
     margin-top : 5%;
     /*margin-left : 14%;    */
     font-family: 'PT Sans', sans-serif;
@@ -39,14 +42,11 @@ img{
     padding : 10px 10px;
 }
 hr{
-    margin-top:-1%;
     display: block;
-    margin-bottom: 0.5em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
     border-style: inset;
     border-width: 1px;
     border-color:black;
+    margin: -1% 1.5em .5em 1.5em;
 }
 button {
     border: 2px solid #f66;

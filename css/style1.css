@@ -11,9 +11,13 @@ ul {
 
 body{
     margin : 0;
-    padding : 0;
+    padding-top : 0;
 }
 #navigation{
+    z-index:1;
+    padding-bottom:5%;
+    width:100%;
+    position:fixed;
     margin : 0;
     padding:0;
     font-family: 'Roboto Condensed', sans-serif;
@@ -52,7 +56,7 @@ a:link {
     float : left;
     padding:0px;
     font-family: 'Shadows Into Light';
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 2px 2px #f00;
     color:#fff;
     font-size:1.8em;
 }
