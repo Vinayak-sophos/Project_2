@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+#balance{
+    position : absolute;
+    left : 9%;
+    top : 40%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#deposit{
+    position : absolute;
+    left : 31%;
+    top : 40%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#forsale{
+    position : absolute;
+    left : 55%;
+    top : 40%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#transactions{
+    position : absolute;
+    left : 78%;
+    top : 40%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+img{
+    height : 164px;
+    width : 185px;
+}
+#balancetext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 91%;
+    text-align : center;
+    font-size: 1.2em;
+}
+#deposittext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
+#forsaletext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
+#transactionstext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
+#balance:hover{
+    top : 38.5%;
+}
+#deposit:hover{
+    top : 38.5%;
+}
+#forsale:hover{
+    top : 38.5%;
+}
+#transactions:hover{
+    top : 38.5%;
+}
