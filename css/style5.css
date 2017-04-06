@@ -2,7 +2,7 @@
 #balance{
     position : absolute;
     left : 9%;
-    top : 40%;
+    top : 50%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
@@ -10,7 +10,7 @@
 #deposit{
     position : absolute;
     left : 31%;
-    top : 40%;
+    top : 50%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
@@ -18,7 +18,7 @@
 #forsale{
     position : absolute;
     left : 55%;
-    top : 40%;
+    top : 50%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
@@ -26,7 +26,23 @@
 #transactions{
     position : absolute;
     left : 78%;
-    top : 40%;
+    top : 50%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#sellicon{
+    position : absolute;
+    left : 55%;
+    top : 15%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#storeicon{
+    position : absolute;
+    left : 31%;
+    top : 15%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
@@ -67,15 +83,37 @@ img{
     text-align : center;
     font-size: 1.2em;
 }
+#storetext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
+#selltext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
 #balance:hover{
-    top : 38.5%;
+    top : 48.5%;
 }
 #deposit:hover{
-    top : 38.5%;
+    top : 48.5%;
 }
 #forsale:hover{
-    top : 38.5%;
+    top : 48.5%;
 }
 #transactions:hover{
-    top : 38.5%;
+    top : 48.5%;
+}
+#sellicon:hover{
+    top : 13.5%;
+}
+#storeicon:hover{
+    top : 13.5%;
 }
