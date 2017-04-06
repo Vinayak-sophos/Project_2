@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Headland+One');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body{
+    overflow: hidden;
+}
+img{
+    position : absolute;
+    left : 100px;
+    top:190px;
+}
+.info{
+    font-family: 'Josefin Sans', sans-serif;
+    position :relative;
+    left : 40%;
+    box-shadow: 6px 0px 5px -5px #999, -6px 0px 5px -5px #999;
+    height : 100vw;
+    padding-left : 30px;
+}
+.desc{
+    position : relative;
+    top : 1%;
+    left : 310px;
+    width : 500px;
+    height : 300px;
+    background-color : rgb(247, 249, 234);
+    padding : 10px 10px 10px 10px;
+}
+.itemname{
+    font-size:2em;
+    top : 50px;
+    position : relative;
+    font-family: 'Headland One', serif;
+    text-decoration : underline;
+}
+.contact{
+    position : relative;
+    top : -350px;
+}
+.sell{
+    position : relative;
+    top : -208px;
+}
+.college{
+    position : relative;
+    top : -189px;
+}
+.category{
+    position : relative;
+    top : 56px;
+}
+.date{
+    position : relative;
+    top : -169px;
+}
+.contactseller{
+    position : relative;
+    top : 10px;
+    left : 10px;
+    width : 80px;
+}
+.addtocart{
+    position : relative;
+    top : -71px;
+    left : 750px;
+}
+#contacttext{
+    position : relative;
+    top : -60px;
+    left : 10px;
+}
+#addtext{
+    position : relative;
+    top : -75px;
+    left : 750px;
+}
