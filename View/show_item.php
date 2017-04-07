@@ -28,7 +28,7 @@
             Uploaded for sale on {${$name}['date']}<br/>
         </div>
         <a href='".generate_url('store', 'contact_seller')."&item_id={${$name}['item_id']}'><img class = \"contactseller\" src = \"../img/contactseller.png\" width = \"80px\"></a><br/>
-        <a href='".generate_url('sctore', 'buy')."&item_id=".${$name}['item_id']."'><img class = \"addtocart\" src = \"../img/addtocart.png\" width = \"80px\"></a>
+        <a href='".generate_url('store', 'buy')."&item_id=".${$name}['item_id']."'><img class = \"addtocart\" src = \"../img/addtocart.png\" width = \"80px\"></a>
         <div id = \"contacttext\">Contact Seller</div>
         <div id = \"addtext\">Add to Cart</div>
     </div>"

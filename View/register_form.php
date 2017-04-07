@@ -1,5 +1,7 @@
 <style>
-     input[type=text], input[type=password], input[type=email] {
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+input[type=text], input[type=password], input[type=email] {
     font-size: 15px;
     background : #fff;
     height: 42px;
@@ -10,7 +12,8 @@
     box-sizing: border-box;
 } 
 body{
-    background : #cfc;
+    background : #fff;
+    font-family: 'Josefin Sans';
 }
 .lgn{
     width:7%;
@@ -24,72 +27,106 @@ body{
     position: absolute;
     cursor: pointer;
     background-color: #09f;
-    color: #000;
     top:1%;
     left:91.5%;
     opacity: 0.5;
     filter: alpha(opacity=50);
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    border-radius : 3px;
+    border-width : 0px;
 }
+a{ 
+    color: inherit; 
+} 
 .lgn:hover{
     top:.6%;
 }
 #gn{
   position : absolute;
-  top:50%;
+  top:73%;
   left : 37%;
 }
 #clg{
   position:absolute;
-  top:29%;
+  top:53%;
   left:37%;
 }
 #fname{
   position : absolute;
-  top :15%;
+  top :38%;
   left : 42%;
 }
 #em1{
   position:absolute;
-  top:22%;
+  top:45%;
   left:42%;
 }
 #clg1{
   position : absolute;
-  top : 30%;
+  top : 52.5%;
   left: 40%;
 }
 #pass1{
   position : absolute;
-  top : 36%;
+  top : 59%;
   left:42%;
 }
 #conf{
   position : absolute;
-  top : 43%;
+  top : 66%;
   left:42%;
 }
 #gn1{
   position :absolute;
-  top : 50%;
+  top : 73%;
   left:42%;
 }
 .button3{
   position : absolute;
   padding: 5px 96px;
   background-color: #09f;
-  top:55%;
+  top:78%;
   left:42%;
+  border-radius : 5px;
 }
 .button3:hover {
     background-color: #ff33cc;
     color: white;
 }
+#gohome{
+     font-family: 'Shadows Into Light';
+     color:#000;
+     position :absolute;
+     z-index: 10;
+     left:38%;
+     font-size: 120px;
+     top:1%;
+     text-decoration : none;
+}
+#titledisp{
+    position : relative;
+    top : 29%;
+    text-align : center;
+    left : -3%;
+    font-size : 3em;
+    text-decoration : bold;
+}
+select{
+    width : 378%;
+    height : 30px;
+    border-radius : 3px;
+}
 </style>
 <html>
 <body>
-  <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
+<link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
+<div id = "gohome">
+  <a href = "../index.php" style="text-decoration:none"><b>DilseDeal</b></a>
+</div>
+<div id = "titledisp">
+    Register
+</div>
 <form action="<?php echo(generate_url("personalize", "register")); ?>" method="post">
       <div id = "fname">
         <input autocomplete="on" name="name" placeholder="First Name" type="text" required/>
@@ -127,9 +164,6 @@ body{
 </form>
 <div>
     <a href=<?php echo(generate_url("personalize", "login_form")); ?>><button class = "lgn">Login</button></a>
-</div>
-<div>
-  <a href = "../index.php">Go home</a>
 </div>
 </body>
 </html>
