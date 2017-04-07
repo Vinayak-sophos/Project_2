@@ -12,6 +12,10 @@
 <script src='https://rawgit.com/alvarotrigo/fullPage.js/master/vendors/scrolloverflow.min.js'></script>
 <script src='https://rawgit.com/alvarotrigo/fullPage.js/master/jquery.fullPage.js'></script>
 <script src="<?php echo(JS_PATH); ?>index.js"></script>
+    <div class = "topbtn">
+          <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button3">Log In</button></a>
+          <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button4">Sign Up</button></a>
+    </div>
     <div id="fullpage">
         <div class="section" id ="page1">
           <div id ="title" class = "in">
@@ -21,13 +25,13 @@
             Buy/Sell anything
           </div>
           <!--<div class="box blue"></div>-->
-          <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button1">Sign Up</button></a>
           <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a>
+          <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button1">Sign Up</button></a>
         </div>
         <div class="section">
-          This section will talk about the webApp. How we can buy and sell everything here.
+        This section will talk about the webApp. How we can buy and sell everything here.
         </div>
-        <div class="section">
+        <div class="section" style = "background-color : #6f9;">
           <div id = "topic">
             <h4>How to use</h4>
             <div class="screenshot" id = "s1">
@@ -41,12 +45,14 @@
             </div>
           </div>
         </div>
-        <div class="section">
+        <div class="section" style = "background-color : #19194d; color : #fff">
           <div id ="div3">
             How to use(part2)
           </div>
         </div>
-        <div class="section">
-          So what are waiting for, Sign up <a href=<?php echo(generate_url("personalize", "register_form")); ?>>here</a>
-        </div>
+        <div class="section" style = "background-color : #ff8533;">
+          <div id = "waittext">So what are waiting for</div>
+          <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a>
+          <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button1">Sign Up</button></a>
+          </div>
     </div>

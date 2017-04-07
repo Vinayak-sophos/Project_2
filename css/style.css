@@ -1,17 +1,17 @@
-
 #page1{
   width:100%;
-  background : #000   no-repeat fixed center;
+  background : #111   no-repeat fixed center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow:auto;
   font-family: 'Shadows Into Light';
+  background: url(../img/background.jpg);
 }
 #title{
-  text-shadow: 2px 2px #ff0000;
-  color:#fff;
+  /*text-shadow: 2px 2px #ff0000;*/
+  color:#000;
   position :absolute;
   z-index: 10;
   left:38%;
@@ -19,12 +19,12 @@
   top:15%;
 }
 #subtitle{
-  text-shadow: 2px 2px #f00;
+  /*text-shadow: 2px 2px #f00;*/
   position: absolute;
   z-index: 10;
   font-size: 36px;
   left:43%;
-  color: #fff;
+  color: #000;
   top:34%;
 }
 #page2{
@@ -71,9 +71,11 @@ display:none;
 }
 .button1{
   padding: 15px 74px;
-  background-color: #09f;
+  background-color: #77f;
+  color : #fff;
   top:50%;
   left:43.3%;
+  border-radius : 3px;
 }
 .button1:hover {
     background-color: #ff33cc;
@@ -81,9 +83,11 @@ display:none;
 }
 .button2{
   padding: 15px 80px;
-  background-color: #09f;
+  background-color: #77f;
+  color : #fff;
   top:60%;
   left:43.3%;
+  border-radius : 3px;
 }
 .button2:hover {
   background-color: #ff33cc;
@@ -141,6 +145,38 @@ input[type=text], input[type=password], input[type=email] {
     border-radius: 4px;
     box-sizing: border-box;
 } 
-.name{
-  
+.topbtn{
+  position :fixed;
+  top : 10px;
+  right : 140px;
+  z-index:2;
+}
+.topbtn>a>.button { 
+    border: none;
+    color: white;
+    padding: 10px 3px;
+    width : 95px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.topbtn>a>.button3 {
+    border-radius : 2px;
+    right :20px;
+    color: #fff;
+    background-color: #9900cc;
+}
+.topbtn>a>.button4 {
+    border-radius : 2px;
+    background-color: #9900cc; 
+    color: #fff; 
+}
+#waittext{
+  font-family: 'Josefin Sans';
+  position:relative;
+  top : -40px;
+  font-size : 1.5em;
 }
