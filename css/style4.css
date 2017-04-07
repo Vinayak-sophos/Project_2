@@ -1,53 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 body{
-  background-color : #c6f;
+  background-color : #fff;
 }
 #title{
   position : absolute;
-  top:32%;
+  top:28%;
   left : 42%;
 }
 #desc{
   position:absolute;
-  top:42%;
+  top:43%;
   left:42%;
-}
-#category{
-   position:absolute;
-   top:39%;
-   left:42%;
 }
 #contact{
   position : absolute;
-  top :49%;
+  top :52%;
   left : 42%;
 }
 #radio{
   position : absolute;
-  top :56%;
+  top :61%;
   left : 41%;
 }
 #price{
   position : absolute;
-  top :60%;
+  top :65%;
   left : 42%;
 }
 #upload{
   position : absolute;
-  top :67%;
+  top :73%;
   left : 45%;
 }
 #add{
   position : absolute;
-  top :71%;
+  top :76%;
   left : 42%;
 }
 .button3{
   position : absolute;
-  padding: 4px 110px;
+  padding: 4px 10px;
   background-color: #09f;
   top:55%;
   left:42%;
+  border-radius : 3px;
+  height : 5vh;
+  width : 16vw;
 }
 .button3:hover {
     background-color: #ff33cc;
@@ -66,10 +64,36 @@ input[type=text], input[type=password], input[type=email] {
 #headname{
     position : absolute;
     left:38%;
-    top:10%;
+    top:4%;
     padding:0px;
     font-family: 'Shadows Into Light';
-    text-shadow: 2px 2px #f00;
-    color:#fff;
+    color:rgb(170, 50, 29);
     font-size:7em;
+}
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #000;
+    width: 16vw;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    top : 37vh;
+    position : relative;
+    left : 42vw;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.select-style select:focus {
+    outline: none;
 }

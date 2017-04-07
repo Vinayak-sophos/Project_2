@@ -22,7 +22,7 @@
             <b>DilseDeal</b>
           </div>
           <div id = "subtitle">
-            Buy/Sell anything
+            <b>Buy/Sell anything</b>
           </div>
           <!--<div class="box blue"></div>-->
           <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a>
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="section" style = "background-color : #ff8533;">
-          <div id = "waittext">So what are waiting for</div>
+          <div id = "waittext">So what are you waiting for</div>
           <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a>
           <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button1">Sign Up</button></a>
           </div>

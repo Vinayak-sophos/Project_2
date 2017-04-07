@@ -8,6 +8,7 @@
   overflow:auto;
   font-family: 'Shadows Into Light';
   background: url(../img/background.jpg);
+  
 }
 #title{
   /*text-shadow: 2px 2px #ff0000;*/
@@ -17,6 +18,7 @@
   left:38%;
   font-size: 120px;
   top:15%;
+  color :rgb(170, 50, 29);
 }
 #subtitle{
   /*text-shadow: 2px 2px #f00;*/
@@ -26,6 +28,7 @@
   left:43%;
   color: #000;
   top:34%;
+  color :rgb(170, 50, 29);
 }
 #page2{
   top:500px;

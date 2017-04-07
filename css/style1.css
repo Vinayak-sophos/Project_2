@@ -8,7 +8,6 @@ ul {
     background-color: rgb(100, 100, 100)
     
 }
-
 body{
     margin : 0;
     padding-top : 0;
@@ -27,7 +26,9 @@ li {
     float:right;
     padding : 2px 10px 2px 10px;
 }
-
+a{
+    color: inherit; 
+}
 li a {
     display: block;
     color: #fff;
@@ -54,9 +55,8 @@ a:link {
 }
 #icon{
     float : left;
-    padding:0px;
+    padding-left:10px;
     font-family: 'Shadows Into Light';
-    text-shadow: 2px 2px #f00;
-    color:#fff;
+    color: rgb(216, 216, 41);
     font-size:1.8em;
 }

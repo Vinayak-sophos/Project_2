@@ -1,9 +1,9 @@
 <body>
     <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
     <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style4.css">
-    <div id = "headname">DilseDeal</div>
+    <div id = "headname"><b>DilseDeal</b></div>
     <form action="<?php echo(generate_url("store", "add_item_db")); ?>" method="post" enctype="multipart/form-data">
-        <div id = "category">
+        <div class = "select-style">
             <select name="category">
                 <option value="0" selected disabled/>Select Category</option>
                 <option value="books" />Books</option>

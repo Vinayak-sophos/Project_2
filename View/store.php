@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style2.css">
 <h1><a href="<?php echo(generate_url('store', 'store')); ?>">Store</a></h1>
-<form method="post" action="<?php echo(generate_url('store', 'store')); ?>">
+<form id = "searchbar" method="post" action="<?php echo(generate_url('store', 'store')); ?>">
     <input type="text" name="q" placeholder="Search" />
     <button type="submit">Search</button>
 </form>
@@ -9,7 +9,8 @@
 
 <div id="advanced" style="display:none">
     
-    
+<!-- Use Search form field-->
+
 <!-- SECTION CATEGORIES -->
 
 <?php
@@ -82,14 +83,22 @@ else {
 } ?></h3>
 </div>
     <!--<tr><th>Image</th><th>Title</th><th>Price</th><th>College</th><th>Category</th><th>Date</th><th>Contact Seller</th></tr>-->
-
+<table align = "center" style="border: 1px solid transparent">
     <?php for($i = 0; $i < $len; $i++){
         $name = "num_".$i;
-        echo("  <div class = \"element\">    
-                    <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' width='70px' height='70px'/>
-                    <div class=\"desc-div\">
+        if($i%4==0)
+        {
+            echo("<tr>");
+        }
+        echo("  <td width=\"20%\">
+                <a href='".generate_url('store', 'more_info')."&item_id={${$name}['item_id']}'>
+                    <div class = \"element\">    
+                        <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' width='70px' height='70px'/>
                         <div id = \"name\">
-                            <b>{${$name}['item_name']}</b>({${$name}['category']})
+                            <b>{${$name}['item_name']}</b>  
+                        </div>
+                        <div id = \"category\">
+                            ({${$name}['category']})
                         </div>
                         <div id = \"price\">
                             Price - Rs. {${$name}['price']}
@@ -97,15 +106,15 @@ else {
                         <div id = \"clg\">
                             College - {${$name}['college']}
                         </div>
-                        <div id = \"con\">
-                            <a href='".generate_url('store', 'contact_seller')."&item_id={${$name}['item_id']}'>Contact Seller</a>
-                        </div>
                     </div>
-
+                </a>
+                </td>                                                                                       
             ");
+            if($i%4==3)
+            {
+                echo("</tr>");
+            }
     } ?>
-                 <hr class = \"horizontal\">
-                
-        
+</table>
 </body>
 
