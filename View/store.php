@@ -7,12 +7,11 @@
 
 <!--<button onclick="advanced()" id="togg">Advanced Search</button>-->
 
-<div id="advanced">
-    
+<!--<div id="advanced" style="display:none">-->
 <!-- Use Search form field-->
 
 <!-- SECTION CATEGORIES -->
-
+<div id = "advanced">
 <?php
     $categories = [
         "Bags",
@@ -25,13 +24,12 @@
         ];
 ?>
 <h2>Search By Category</h2>
-<ul>
-    <?php foreach($categories as $category) { ?>
-        <li><a href="<?php echo(generate_url("store", "store").'&category='.lcfirst($category)); ?>"><?php echo($category); ?></a></li>
+
+<form action="">
+<?php foreach($categories as $category) { ?>
+        <a href="<?php echo(generate_url("store", "store").'&category='.lcfirst($category)); ?>"><?php echo($category); ?></a><br>
     <?php } ?>
-</ul>
-
-
+</form>
 
 
 
@@ -46,12 +44,11 @@
         ];
 ?>
 <h2>Search By College</h2>
-<ul>
+<form action = "">
     <?php foreach($colleges as $college) { ?>
-        <li class = "advsearch"><a href="<?php echo(generate_url("store", "store").'&college='.$college); ?>"><?php echo($college); ?></a></li>
+        <a href="<?php echo(generate_url("store", "store").'&college='.$college); ?>"><?php echo($college); ?></a><br>
     <?php } ?>
-</ul>
-
+</form>
 </div>
 
 
@@ -73,7 +70,7 @@
 <!-- // show data and links for contact seller -->
 <div id = "headstore">
 <h3><?php if (!$len) {
-    echo("Sorry, no item found, <a href='".generate_url("store", "add_items")."'>Add Items</a>");
+    echo("Sorry, no item found, Add Item  <a href='".generate_url("store", "add_items")."'>here</a>");
     exit;
 } else if ($len == 1) {
     echo("Showing {$len} result");
@@ -93,7 +90,7 @@ else {
         echo("  <td width=\"20%\">
                 <a href='".generate_url('store', 'more_info')."&item_id={${$name}['item_id']}'>
                     <div class = \"element\">    
-                        <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']."' width='70px' height='70px'/>
+                        <img src='".UPLOAD_PATH.${$name}['image']."' alt='".${$name}['image']." height='70px'/>
                         <div id = \"name\">
                             <b>{${$name}['item_name']}</b>  
                         </div>
