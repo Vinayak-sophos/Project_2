@@ -17,20 +17,35 @@ overflow-x:hidden;
     padding-top:3%;
     text-decoration:underline;
 }
+#headstore>h3>a{
+    color : #faa;
+}
 table{
     border-collapse: separate;
     border-spacing: 0em 0.5em;
     left : 14%;
     position : relative;
 }
+td th{
+    word-wrap: break-word;
+    max-width: 150px;
+}
 #advanced{
     position : fixed;
-    top : 10%;
-    z-index : 2;
+    margin-top : 12%;
+    top : -10%;
+    left : 2%;
+    z-index : 20;
+    height : 100vw;
+    overflow-y : hidden;
+    box-shadow: 6px 0px 5px -5px #999;
+    width : 25%;
+    max-width : 25%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .element{
     -webkit-transition: margin .5s;
-    -moz-transition: margin .5s;
+    -moz-transition: .5s;
     transition: .5s;
     margin-top:0%;
     height:340px;
@@ -92,7 +107,6 @@ table{
 img,element{
     position:relative;
     margin: 20px 20px 20px 20px;
-    width:40%;
     height:40%;
 }
 #search{
@@ -106,6 +120,40 @@ img,element{
     height:50px;
 }
 #searchbar{
+    position : fixed;
+    left : 0;
+    text-align : center;
+    padding-bottom:.8%;
+    padding-top : .8%;
+    top :5.7%;
+    box-shadow: 0px 7px 5px -5px #999;
+    z-index : 200;
+    padding-left : 34%;
+    padding-right : 45%;
+    background-color : #ffffe6;
+    width : 32vw;
+}
+#searchbar>button{
+    width : 23%;
+    height : 31px;
+    border-radius : 3px;
+    background-color : rgb(68, 164, 237);
+    color :#fff;
+    border : none;
+    cursor : pointer;
+}
+#advanced>h2{
+    font-size : 2em;
+}
+#advanced>form>a{
     position : relative;
-    left : 40%;
+    font-size : 1.2em;
+    color : rgb(221, 75, 221);
+    text-decoration : bold;
+    -webkit-transition:left color .5s;
+    -moz-transition: .5s;
+}
+#advanced>form>a:hover{
+    left : 5px;
+    color :rgb(55, 71, 163);
 }
