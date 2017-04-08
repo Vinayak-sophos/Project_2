@@ -155,11 +155,24 @@
             if (intval($row['price']) > intval($arguments['balance'])) return null;
             $sql = "UPDATE users SET balance=balance-".intval($row['price'])." WHERE id=".$_SESSION['id'];
             mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
-            $sql = "INSERT INTO cart (user_id, image, item_name, price, category) VALUES(".$_SESSION['id'].", '".$row['image']."',
-            '".$row['item_name']."', ".$row['price'].", '".$row['category']."')";
+            $sql = "INSERT INTO cart (user_id, image, item_name, price, category, date) VALUES(".$_SESSION['id'].", '".$row['image']."',
+            '".$row['item_name']."', ".$row['price'].", '".$row['category']."', '".date('F d, Y')."')";
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
             $this->remove($arguments);
             return 1;
+        }
+        
+        function history() {
+            $sql = "SELECT * FROM items WHERE seller_id=".$_SESSION['id'];
+            $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            $rows = [];
+            while($row = mysqli_fetch_assoc($result)){ $row['status'] = "Sell"; array_push($rows, $row); }
+            $rows["len"] = mysqli_num_rows($result);
+            $sql = "SELECT * FROM cart WHERE user_id=".$_SESSION['id'];
+            $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
+            while($row = mysqli_fetch_assoc($result)){ $row['status'] = "Buy"; array_push($rows, $row); }
+            $rows["len"] += mysqli_num_rows($result);
+            return $rows;
         }
         
     }

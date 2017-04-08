@@ -10,6 +10,7 @@
             <ul>
                <div id = "icon"><a href = "../index.php" style="text-decoration:none"><b>DilseDeal</b></a></div>
                <li><a href="<?php echo(generate_url('personalize', 'logout')); ?>">LOGOUT</a></li>
+               <li><a href = "<?php echo(generate_url('personalize', 'change_password_form')); ?>">CHANGE PASSWORD</a></li>
                <li><a href = "<?php echo(generate_url('store', 'cart')); ?>">CART</a></li>
                <li><a href="<?php echo(generate_url('store', 'add_items')); ?>">SELL</a</li>
                <li><a href="<?php echo(generate_url('store', 'store')); ?>">STORE</a></li>

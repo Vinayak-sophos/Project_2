@@ -103,5 +103,12 @@
             loadView('footer');
         }
         
+        function history() {
+            loadview("header_home", ["title" => "Transactions"]);
+            $data = loadModel("store", "history");
+            loadView("history", $data);
+            loadView("footer");
+        }
+        
     }
 ?>

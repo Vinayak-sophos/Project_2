@@ -73,5 +73,20 @@
             mysqli_query($this->conn, $sql);
         }
         
+        function change_password($arguments) {
+            if ($arguments['new'] != $arguments['confirm']) return 2;
+            session_start();
+            $sql = "SELECT * FROM users WHERE id=".$_SESSION['id'];
+            $result = mysqli_query($this->conn, $sql);
+            if (mysqli_num_rows($result) == 0) {
+                return 0;
+            }
+            $row = mysqli_fetch_assoc($result);
+            if (!password_verify($arguments["old"], $row["password"])) return 0;
+            $sql = "UPDATE users SET password='".password_hash($arguments['new'], PASSWORD_BCRYPT)."' WHERE id=".$_SESSION['id'];
+            mysqli_query($this->conn, $sql);
+            return 1;
+        }
+        
     }
 ?>
