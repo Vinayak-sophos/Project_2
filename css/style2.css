@@ -10,7 +10,6 @@ padding: 0;
 margin: 0;
 overflow-x:hidden;
 }
-
 #headstore{
     text-align:center;
     font-family: 'Press Start 2P', cursive;
@@ -18,125 +17,16 @@ overflow-x:hidden;
     padding-top:3%;
     text-decoration:underline;
 }
-
-/* from -  http://codepen.io/ongtiffany/pen/BoOeQV */
-/* Styles the thumbnail */
-/*
-.lightbox img {
-height: 100px;
-width:100px;
-border: 3px solid white;
-box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-margin: 0px 20px 20px 20px;
-}
-*/
-/* Styles the lightbox, removes it from sight and adds the fade-in transition */
-
-/*.lightbox-target {*/
-/*position: fixed;*/
-/*top: -100%;*/
-/*width: 50%;*/
-/*background: rgba(0,0,0,.1);*/
-/*opacity: 0;*/
-/*-webkit-transition: opacity .5s ease-in-out;*/
-/*-moz-transition: opacity .5s ease-in-out;*/
-/*-o-transition: opacity .5s ease-in-out;*/
-/*transition: opacity .5s ease-in-out;*/
-/*overflow: hidden;*/
-/*margin-left:50%;*/
-/*}*/
-
-/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-
-/*.lightbox-target img {*/
-/*margin: auto;*/
-/*position: absolute;*/
-/*top: 0;*/
-/*left:0%;*/
-/*right:0;*/
-/*bottom: 0;*/
-/*border: 3px solid black;*/
-/*box-shadow: 0px 0px 8px rgba(0,0,0,.3);*/
-/*width:400px;*/
-/*-webkit-transition: .5s ease-in-out;*/
-/*-moz-transition: .5s ease-in-out;*/
-/*-o-transition: .5s ease-in-out;*/
-/*transition: .5s ease-in-out;*/
-/*}*/
-
-/* Styles the close link, adds the slide down transition */
-
-/*a.lightbox-close {*/
-/*display: block;*/
-/*width:50px;*/
-/*height:50px;*/
-/*box-sizing: border-box;*/
-/*background: white;*/
-/*color: black;*/
-/*text-decoration: none;*/
-/*position: absolute;*/
-/*top: -70px;*/
-/*left : 20px;*/
-/*-webkit-transition: .5s ease-in-out;*/
-/*-moz-transition: .5s ease-in-out;*/
-/*-o-transition: .5s ease-in-out;*/
-/*transition: .5s ease-in-out;*/
-/*}*/
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-/*a.lightbox-close:before {*/
-/*content: "";*/
-/*display: block;*/
-/*height: 30px;*/
-/*width: 1px;*/
-/*background: black;*/
-/*position: absolute;*/
-/*left: 26px;*/
-/*top:10px;*/
-/*-webkit-transform:rotate(45deg);*/
-/*-moz-transform:rotate(45deg);*/
-/*-o-transform:rotate(45deg);*/
-/*transform:rotate(45deg);*/
-/*}*/
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-/*a.lightbox-close:after {*/
-/*content: "";*/
-/*display: block;*/
-/*height: 30px;*/
-/*width: 1px;*/
-/*background: black;*/
-/*position: absolute;*/
-/*left: 26px;*/
-/*top:10px;*/
-/*-webkit-transform:rotate(-45deg);*/
-/*-moz-transform:rotate(-45deg);*/
-/*-o-transform:rotate(-45deg);*/
-/*transform:rotate(-45deg);*/
-/*}*/
-
-/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-
-/*.lightbox-target:target {*/
-/*opacity: 1;*/
-/*top: 0;*/
-/*bottom: 0;*/
-/*}*/
-
-/*.lightbox-target:target img {*/
-/*max-height: 100%;*/
-/*max-width: 100%;*/
-/*}*/
-
-/*.lightbox-target:target a.lightbox-close {*/
-/*top: 0px;*/
-/*}*/
-
 table{
     border-collapse: separate;
-    border-spacing: 3em 0.5em;
+    border-spacing: 0em 0.5em;
+    left : 14%;
+    position : relative;
+}
+#advanced{
+    position : fixed;
+    top : 10%;
+    z-index : 2;
 }
 .element{
     -webkit-transition: margin .5s;

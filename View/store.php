@@ -5,9 +5,9 @@
     <button type="submit">Search</button>
 </form>
 
-<button onclick="advanced()" id="togg">Advanced Search</button>
+<!--<button onclick="advanced()" id="togg">Advanced Search</button>-->
 
-<div id="advanced" style="display:none">
+<div id="advanced">
     
 <!-- Use Search form field-->
 
@@ -48,7 +48,7 @@
 <h2>Search By College</h2>
 <ul>
     <?php foreach($colleges as $college) { ?>
-        <li><a href="<?php echo(generate_url("store", "store").'&college='.$college); ?>"><?php echo($college); ?></a></li>
+        <li class = "advsearch"><a href="<?php echo(generate_url("store", "store").'&college='.$college); ?>"><?php echo($college); ?></a></li>
     <?php } ?>
 </ul>
 
@@ -83,10 +83,10 @@ else {
 } ?></h3>
 </div>
     <!--<tr><th>Image</th><th>Title</th><th>Price</th><th>College</th><th>Category</th><th>Date</th><th>Contact Seller</th></tr>-->
-<table align = "center" style="border: 1px solid transparent">
+<table width = "70%" align = "center" style="border: 1px solid transparent">
     <?php for($i = 0; $i < $len; $i++){
         $name = "num_".$i;
-        if($i%4==0)
+        if($i%3==0)
         {
             echo("<tr>");
         }
@@ -110,7 +110,7 @@ else {
                 </a>
                 </td>                                                                                       
             ");
-            if($i%4==3)
+            if($i%3==2)
             {
                 echo("</tr>");
             }
