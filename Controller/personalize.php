@@ -2,7 +2,7 @@
     class personalize {
         
         function __construct() {
-            if ($_GET['function'] == 'change_password_form' || $_GET['function'] == 'change_password') return;
+            if ($_GET['function'] == 'change_password_form' || $_GET['function'] == 'change_password' || $_GET['function'] == 'about_us') return;
             $ack = loadModel("personalize", "verify");
             if ($ack){
                 redirect("store", "home");
@@ -68,6 +68,12 @@
                 echo("Password Updated Successfully<br>Redirecting in 5 seconds...");
                 header("refresh:5;url=".generate_url('store', 'home'));
             }
+        }
+        
+        function about_us() {
+            loadView("header_home", ["title" => "About Us"]);
+            loadView("about_us");
+            loadView("footer");
         }
         
     }
