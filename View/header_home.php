@@ -2,7 +2,7 @@
     <head>
         <title><?php echo($title); ?></title>
     </head>
-    <body style = "z-index : 999;">
+    <body>
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style1.css">
         <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
