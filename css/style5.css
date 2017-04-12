@@ -25,15 +25,15 @@
 }
 #transactions{
     position : absolute;
-    left : 78%;
-    top : 50%;
+    left : 67%;
+    top : 15%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
 }
 #sellicon{
     position : absolute;
-    left : 55%;
+    left : 43%;
     top : 15%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
@@ -41,8 +41,16 @@
 }
 #storeicon{
     position : absolute;
-    left : 31%;
+    left : 20%;
     top : 15%;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    transition: .3s;
+}
+#changepass{
+    position : absolute;
+    left : 78%;
+    top : 50%;
     -webkit-transition: margin .3s;
     -moz-transition: margin .3s;
     transition: .3s;
@@ -99,6 +107,14 @@ img{
     text-align : center;
     font-size: 1.2em;
 }
+#changepasstext{
+    width:185px;
+    font-family: 'Josefin Sans';
+    position:absolute;
+    top : 102%;
+    text-align : center;
+    font-size: 1.2em;
+}
 #balance:hover{
     top : 48.5%;
 }
@@ -109,11 +125,14 @@ img{
     top : 48.5%;
 }
 #transactions:hover{
-    top : 48.5%;
+    top : 13.5%;
 }
 #sellicon:hover{
     top : 13.5%;
 }
 #storeicon:hover{
     top : 13.5%;
+}
+#changepass:hover{
+    top: 48.5%;
 }

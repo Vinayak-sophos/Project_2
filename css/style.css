@@ -19,6 +19,12 @@
   font-size: 120px;
   top:15%;
   color :rgb(170, 50, 29);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;  
 }
 #subtitle{
   /*text-shadow: 2px 2px #f00;*/
@@ -29,6 +35,12 @@
   color: #000;
   top:34%;
   color :rgb(170, 50, 29);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 #page2{
   top:500px;

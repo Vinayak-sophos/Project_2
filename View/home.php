@@ -40,3 +40,10 @@
         Transactions</a><br/>
     </div>
 </div>
+<div id = "changepass">
+    <a href="<?php echo(generate_url('personalize', 'change_password_form')); ?>">
+    <img src = "../img/changepass.png" class = "homeicon">
+    <div id = "changepasstext">
+        Change Password</a><br/>
+    </div>
+</div>

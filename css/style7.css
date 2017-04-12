@@ -19,8 +19,9 @@ img{
 .desc{
     position : relative;
     top : 1%;
-    left : 310px;
-    width : 500px;
+    left : 22%;
+    width : 32%;
+    padding-right:1%;
     height : 300px;
     background-color : rgb(247, 249, 234);
     padding : 10px 10px 10px 10px;
@@ -55,21 +56,46 @@ img{
 .contactseller{
     position : relative;
     top : 10px;
-    left : 10px;
+    left : 1vw;
     width : 80px;
 }
 .addtocart{
     position : relative;
     top : -71px;
-    left : 750px;
+    left : 49vw;
 }
 #contacttext{
     position : relative;
     top : -60px;
-    left : 10px;
+    left :1vw;
 }
 #addtext{
     position : relative;
     top : -75px;
-    left : 750px;
+    left : 49vw;
+}
+#advanced{
+    position :relative;
+    left :0;
+    top : -346px;
+}
+#advanced>a{
+    position :relative;
+    top : 36px;
+    left : -8.8%;
+}
+form{
+    position : relative;
+    top : 40%;
+    text-align : center;
+}
+button{
+    border-radius : 5px;
+    width : 16%;
+    left : -1%;
+    height : 2.5em;
+    background-color :rgb(16, 156, 211) ;
+    color : #fff;
+    border : none;
+    cursor : pointer;
 }

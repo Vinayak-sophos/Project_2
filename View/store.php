@@ -80,7 +80,27 @@ else {
 } ?></h3>
 </div>
     <!--<tr><th>Image</th><th>Title</th><th>Price</th><th>College</th><th>Category</th><th>Date</th><th>Contact Seller</th></tr>-->
-<table width = "70%" align = "center" style="border: 1px solid transparent">
+<?php
+    if($len==1)
+    {
+?>
+    <table width = "23%" align = "center" style="border: 1px solid transparent">
+<?php
+    }
+    else
+    if($len==2)
+    {
+?>
+    <table width = "46%" align = "center" style="border: 1px solid transparent">
+<?php
+    }
+    else
+    {
+?>    
+    <table width = "70%" align = "center" style="border: 1px solid transparent">
+<?php
+    }
+?>
     <?php for($i = 0; $i < $len; $i++){
         $name = "num_".$i;
         if($i%3==0)
