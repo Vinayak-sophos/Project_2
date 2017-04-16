@@ -37,11 +37,13 @@ li a {
     
 }
 .name:hover{
-    color : #69f;
+    /*color : #69f;*/
+    background: rgba(0, 0, 0, 0.2)!important;
 }
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    color: #69f;
+    /*color: #69f;*/
+    background: rgba(0, 0, 0, 0.2)!important;
 }
 .name{
     position : absolute;

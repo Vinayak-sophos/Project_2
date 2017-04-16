@@ -70,7 +70,7 @@
 <!-- // show data and links for contact seller -->
 <div id = "headstore">
 <h3><?php if (!$len) {
-    echo("Sorry, no item found, Add Item  <a href='".generate_url("store", "add_items")."'>here</a>");
+    echo("<div id = \"sorrytext\" style=\"left : 12%;position : relative;font-size : .8em;\">Sorry, no item found, Add Item  <a href='".generate_url("store", "add_items")."'>here</a></div>");
     exit;
 } else if ($len == 1) {
     echo("Showing {$len} result");

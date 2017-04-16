@@ -17,7 +17,7 @@
   z-index: 10;
   left:38%;
   font-size: 120px;
-  top:15%;
+  top:120px;
   color :rgb(170, 50, 29);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -33,7 +33,7 @@
   font-size: 36px;
   left:43%;
   color: #000;
-  top:34%;
+  top:275px;
   color :rgb(170, 50, 29);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -88,7 +88,7 @@ display:none;
   padding: 15px 74px;
   background-color: #77f;
   color : #fff;
-  top:50%;
+  top:450px;
   left:43.3%;
   border-radius : 3px;
 }
@@ -100,7 +100,7 @@ display:none;
   padding: 15px 80px;
   background-color: #77f;
   color : #fff;
-  top:60%;
+  top:520px;
   left:43.3%;
   border-radius : 3px;
 }
