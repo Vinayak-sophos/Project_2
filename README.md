@@ -7,15 +7,15 @@ DilSeDeal</b><br/>
 <br/>
 <b>Front End Developer</b><br/>
 <br/>
-Salil<br/>
+Salil Jain<br/>
 <br/>
-College - <br/>
+College - BITS Goa<br/>
 <br/>
-Email ID - <br/>
+Email ID - j.salil36@gmail.com<br/>
 <br/>
-<a href="#" target="_blank">Facebook ID</a><br/>
+<a href="https://www.facebook.com/salil.jain.5891" target="_blank">Facebook ID</a><br/>
 <br/>
-<a href="#" target="_blank">Linkedin ID</a><br/>
+<a href="https://www.linkedin.com/in/salil-jain-328701135/" target="_blank">Linkedin ID</a><br/>
 <br/>
 <br/>
 <b>Back End Developer</b><br/>
