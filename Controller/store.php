@@ -67,7 +67,7 @@
         // remove item from database
         function remove($arguments) {
             loadModel("store", "remove", $arguments);
-            redirect("store", "home");
+            redirect("store", "my_items");
         }
         
         // item description

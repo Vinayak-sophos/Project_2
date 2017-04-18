@@ -120,7 +120,7 @@
             empty($arguments['choice']) || (!isset($arguments['price']) && $arguments['choice'] == "sell") || 
             (empty($arguments['price']) && $arguments['choice'] == "sell") ||
             !isset($arguments['fileToUpload']) || empty($arguments['fileToUpload'])) return false;
-            if (!is_numeric($arguments['contact']) || !is_numeric($arguments['price'])) return false;
+            if (!is_numeric($arguments['contact']) || (!is_numeric($arguments['price']) && $arguments['choice'] == "sell")) return false;
             $img_name = $this->upload($arguments);
             $sql = "INSERT INTO items (seller_id, item_name, description, contact, choice, price, image, date, category, college) VALUES ("
             .$arguments['id'].", '".$arguments['item_name']."', '".$arguments['description']."', '".$arguments['contact']."', '".$arguments['choice']."', 

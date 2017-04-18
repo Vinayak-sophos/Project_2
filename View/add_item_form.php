@@ -1,3 +1,14 @@
+<script>
+    function togg(data) {
+        if (data == 0) {
+            document.getElementById("price").style.display = "none";
+        }
+        else if (data == 1) {
+            document.getElementById("price").style.display = "initial";
+        }
+    }
+</script>
+
 <body>
     <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
     <link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style4.css">
@@ -25,10 +36,10 @@
             <input type = "text"  placeholder="Contact Info" name="contact"><br/>
         </div>
         <div id ="radio">
-            <input type="radio" name="choice" value="donate" />I Want to Donate
-            <input type="radio" name="choice" value="sell" />I Want to Sell<br/>
+            <input type="radio" name="choice" value="donate" onclick="togg(0)" />I Want to Donate
+            <input type="radio" name="choice" value="sell" onclick="togg(1)" />I Want to Sell<br/>
         </div>
-        <div id = "price">
+        <div id = "price" style="display:none">
             <input type="text" name="price" placeholder="Price(in Rs.)"/><br/>
         </div>
         <div id ="upload">
