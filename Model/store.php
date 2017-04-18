@@ -1,8 +1,14 @@
 <?php
+
+    /*
+        all functions related to store
+    */
+
     class storeModel {
         
         public $conn;
         
+        // connecting to database
         function __construct() {
             $mysql_db_hostname = "localhost";
             $mysql_db_user = "vishusachdeva";
@@ -11,6 +17,9 @@
             $this->conn = mysqli_connect($mysql_db_hostname, $mysql_db_user, $mysql_db_password, $mysql_db_database) or die("Could not connect database");
         }
         
+        // important function
+        // used to access items which are on sale by generating respective queries
+        // like on searching, by user id, by any other user's id, by category, by college, by item id or whole items
         function getData($arguments) {
             $sql = "";
             if (isset($arguments['id'])) {
@@ -44,6 +53,7 @@
             return $rows;
         }
         
+        // return all the items which are on sale by current logged in user
         function my_items($arguments) {
             $sql = "SELECT * FROM items WHERE seller_id=".$arguments["id"];
             $result = mysqli_query($this->conn, $sql);
@@ -56,6 +66,7 @@
             return $rows;
         }
         
+        // upload image when user add item for sale
         function upload($arguments) {
             $target_dir = getcwd().DIRECTORY_SEPARATOR."uploads/";
             $target_file = $target_dir . basename($arguments["fileToUpload"]["name"]);
@@ -101,11 +112,13 @@
             }
         }
         
+        // add item to database for sale
         function add_item_db($arguments) {
             if (!isset($arguments['category']) || empty($arguments['category']) || !isset($arguments['item_name']) ||
             empty($arguments['item_name']) || !isset($arguments['description']) || empty($arguments['description']) ||
             !isset($arguments['contact']) || empty($arguments['contact']) || !isset($arguments['choice']) ||
-            empty($arguments['choice']) || !isset($arguments['price']) || empty($arguments['price']) ||
+            empty($arguments['choice']) || (!isset($arguments['price']) && $arguments['choice'] == "sell") || 
+            (empty($arguments['price']) && $arguments['choice'] == "sell") ||
             !isset($arguments['fileToUpload']) || empty($arguments['fileToUpload'])) return false;
             if (!is_numeric($arguments['contact']) || !is_numeric($arguments['price'])) return false;
             $img_name = $this->upload($arguments);
@@ -119,6 +132,7 @@
             return true;
         }
         
+        // remove item from the database
         function remove($arguments){
             $sql = "SELECT image FROM items WHERE item_id=".$arguments['item_id'];
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
@@ -129,6 +143,7 @@
             mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
         }
         
+        // contact seller (info of seller)
         function contact_seller($arguments) {
             $sql = "SELECT * FROM items WHERE item_id=".$arguments['item_id'];
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
@@ -139,6 +154,7 @@
             return $row;
         }
         
+        // cart for user (extract items from database which are bought by user)
         function cart() {
             $sql = "SELECT * FROM cart WHERE user_id=".$_SESSION['id'];
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
@@ -148,6 +164,7 @@
             return $rows;
         }
         
+        // buy item by item id
         function buy($arguments) {
             $sql = "SELECT * FROM items WHERE item_id=".$arguments['item_id'];
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
@@ -162,6 +179,7 @@
             return 1;
         }
         
+        // keep records of all the transactions by the user
         function history() {
             $sql = "SELECT * FROM items WHERE seller_id=".$_SESSION['id'];
             $result = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));

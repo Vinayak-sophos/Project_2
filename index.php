@@ -1,7 +1,10 @@
 <?php
-
+    
+    // main file which will render all the pages using mvc
+    
     include_once('lib/config.inc.php');
     
+    // extracting controller name from url
     if (isset($_GET["controller"])){
         $controller = $_GET["controller"];
     }
@@ -9,6 +12,7 @@
         $controller = "guide";
     }
     
+    // extracting function name from url
     if (isset($_GET["function"])){
         $function = $_GET["function"];
     }
@@ -16,8 +20,10 @@
         $function = "initial";
     }
     
+    // generating controller path
     $controller_path = CONTROLLER_PATH.strtolower($controller).'.php';
     
+    // if url is valid then go to it, otherwise redirect to home page
     if (file_exists($controller_path)){
         require_once($controller_path);
         if (!method_exists($controller, $function)){

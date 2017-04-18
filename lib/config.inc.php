@@ -1,5 +1,9 @@
 <?php
 
+    /*
+        MACROS FOR EASIAR PATH ACCESSIBILITY
+    */
+
     define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"].'/../../home/ubuntu/workspace/Project_2/');
     define('VIEW_PATH', SITE_ROOT.'View/');
     define('MODEL_PATH', SITE_ROOT.'Model/');
@@ -8,6 +12,7 @@
     define('CSS_PATH', '/css/');
     define('UPLOAD_PATH', '/uploads/');
 
+    // render view
     function loadView($view, $data = []) {
         
         @extract($data, EXTR_PREFIX_INVALID, "num");
@@ -24,6 +29,7 @@
         
     }
     
+    // render model for performing some action
     function loadModel($model, $function, $arguments = []) {
         
         $model_path = MODEL_PATH.$model.'.php';
@@ -50,10 +56,12 @@
         
     }
     
+    // utility function for easy generation of url
     function generate_url($controller, $function) {
         return "/index.php?controller=".$controller.'&function='.$function;
     }
     
+    // utility function for redirecting the user
     function redirect($controller, $function) {
         header('Location: /index.php?controller='.$controller.'&function='.$function);
     }

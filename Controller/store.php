@@ -1,8 +1,14 @@
 <?php
+
+    /*
+        all pages and functions related to store
+    */
+
     class store {
         
         public $info;
         
+        // if not login then redirect to login form and if login then getting full info of user
         function __construct() {
             $ack = loadModel("personalize", "verify");
             if (!$ack){
@@ -12,6 +18,7 @@
             $this->info = loadModel("personalize", "getInfo");
         }
         
+        // render home page for the user
         function home() {
             $this->info["title"] = "Dashboard";
             loadView("header_home", $this->info);
@@ -19,6 +26,7 @@
             loadView("footer");
         }
         
+        // return items added for selling by the user
         function my_items() {
             $this->info["title"] = "Added By You";
             loadView("header_home", $this->info);
@@ -27,6 +35,7 @@
             loadView("footer");
         }
         
+        // render store
         function store($arguments) {
             $this->info["title"] = "Store";
             loadView("header_home", $this->info);
@@ -35,6 +44,7 @@
             loadView("footer");
         }
         
+        // render add item form
         function add_items() {
             $this->info["title"] = "Add Items";
             loadView("header_home", $this->info);
@@ -42,6 +52,7 @@
             loadView("footer");
         }
         
+        // add item to the database
         function add_item_db($arguments) {
             $ack = loadModel("store", "add_item_db", array_merge($arguments, $this->info));
             if ($ack == false) {
@@ -53,19 +64,22 @@
             redirect("store", "home");
         }
         
+        // remove item from database
         function remove($arguments) {
             loadModel("store", "remove", $arguments);
             redirect("store", "home");
         }
         
+        // item description
         function more_info($arguments) {
             $data = loadModel('store', 'getData', $arguments);
-            $this->info["title"] = $data['item_name'];
+            $this->info["title"] = $data[0]['item_name'];
             loadView('header_home', $this->info);
             loadView('show_item', array_merge($data, $this->info));
             loadView('footer');
         }
         
+        // contact seller page
         function contact_seller($arguments) {
             loadView("header_home", $this->info);
             $data = loadModel("store", "contact_seller", $arguments);
@@ -73,6 +87,7 @@
             loadView("footer");
         }
         
+        // buy item, add item to cart
         function buy($arguments) {
             $check = loadModel("store", "buy", array_merge($arguments, $this->info));
             if ($check == null) {
@@ -84,6 +99,7 @@
             redirect('store', 'cart');
         }
         
+        // deposit money
         function deposit($arguments) {
             loadView('header_home', ["title" => "Deposit Money"]);
             if (isset($_POST['deposit'])) {
@@ -96,6 +112,7 @@
             }
         }
         
+        // render cart
         function cart() {
             loadView('header_home', ["title" => "My Cart"]);
             $data = loadModel('store', 'cart');
@@ -103,6 +120,7 @@
             loadView('footer');
         }
         
+        // render transactions
         function history() {
             loadview("header_home", ["title" => "Transactions"]);
             $data = loadModel("store", "history");

@@ -1,8 +1,14 @@
 <?php
+
+    /*
+        all functions related to login, logout, register, etc
+    */
+
     class personalizeModel {
         
         public $conn;
         
+        // connecting database
         function __construct() {
             $mysql_db_hostname = "localhost";
             $mysql_db_user = "vishusachdeva";
@@ -11,6 +17,7 @@
             $this->conn = mysqli_connect($mysql_db_hostname, $mysql_db_user, $mysql_db_password, $mysql_db_database) or die("Could not connect database");
         }
         
+        // verifying user is logged in or not
         function verify() {
             session_start();
             if (isset($_SESSION["id"])) {
@@ -19,6 +26,7 @@
             return false;
         }
         
+        // validating data login and register form
         function validate($arguments = []) {
             if (!isset($arguments['email']) || empty($arguments['email']) || !isset($arguments['password']) || empty($arguments['password'])) return false;
             if (isset($arguments['name'])) {
@@ -31,6 +39,7 @@
             return true;
         }
         
+        // register the user
         function register($arguments) {
             if (!$this->validate($arguments)) return false;
             $sql = "INSERT INTO users (name, college, email, gender, password, balance) VALUES ('".$arguments['name']."', '".$arguments['college']."', 
@@ -42,6 +51,7 @@
             return $result;
         }
         
+        // login the user
         function login($arguments) {
             if (!$this->validate($arguments)) return false;
             $sql = "SELECT * FROM users WHERE email='".$arguments['email']."'";
@@ -56,11 +66,13 @@
             return true;
         }
         
+        // logout current user
         function logout() {
             session_start();
             session_destroy();
         }
         
+        // get full info of the user
         function getInfo() {
             $sql = "SELECT * FROM users WHERE id=".$_SESSION["id"];
             $result = mysqli_query($this->conn, $sql);
@@ -68,11 +80,13 @@
             return $row;
         }
         
+        // deposit money to user account
         function deposit($arguments) {
             $sql = "UPDATE users SET balance=balance+".$arguments['deposit']." WHERE id=".$_SESSION['id'];
             mysqli_query($this->conn, $sql);
         }
         
+        // change password of the user
         function change_password($arguments) {
             if ($arguments['new'] != $arguments['confirm']) return 2;
             session_start();
