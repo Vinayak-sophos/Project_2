@@ -25,7 +25,7 @@
             <b>Buy/Sell anything</b>
           </div>
           <!--<div class="box blue"></div>-->
-          <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a>
+          <a href="<?php echo(generate_url("personalize", "login_form")); ?>"><button class="button button2">Log In</button></a><br/>
           <a href="<?php echo(generate_url("personalize", "register_form")); ?>"><button class="button button1">Sign Up</button></a>
         </div>
         <div class="section">

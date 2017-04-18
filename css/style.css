@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 .details{
   position : relative!important;
   color : #fff;
@@ -18,11 +19,11 @@
 #title{
   /*text-shadow: 2px 2px #ff0000;*/
   color:#000;
-  position :absolute;
+  position :relative;
   z-index: 10;
-  left:38%;
+  text-align :center;
   font-size: 120px;
-  top:120px;
+  top:-125px;
   color :rgb(170, 50, 29);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -33,12 +34,12 @@
 }
 #subtitle{
   /*text-shadow: 2px 2px #f00;*/
-  position: absolute;
+  position: relative;
   z-index: 10;
   font-size: 36px;
-  left:43%;
+  text-align : center;
   color: #000;
-  top:275px;
+  top:-150px;
   color :rgb(170, 50, 29);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -93,9 +94,10 @@ display:none;
   padding: 15px 74px;
   background-color: #77f;
   color : #fff;
-  top:450px;
-  left:43.3%;
+  top:-58px;
+  text-align : center;
   border-radius : 3px;
+  position : relative;
 }
 .button1:hover {
     background-color: #ff33cc;
@@ -105,9 +107,10 @@ display:none;
   padding: 15px 80px;
   background-color: #77f;
   color : #fff;
-  top:520px;
-  left:43.3%;
+  top:-80px;
+  text-align : center;
   border-radius : 3px;
+  position : relative;
 }
 .button2:hover {
   background-color: #ff33cc;
