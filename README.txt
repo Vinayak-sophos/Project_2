@@ -38,7 +38,7 @@ Featured Functions and Pages
     Store
     Add Items
     Cart
-    Deposit Money
+    Deposit Money (With Captcha)
     Transactions
     Change Password
     Item Description
