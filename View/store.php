@@ -14,6 +14,7 @@
 <div id = "advanced">
 <?php
     $categories = [
+        "All",
         "Bags",
         "Vehicle",
         "Sports",
@@ -37,10 +38,14 @@
 
 <?php
     $colleges = [
-        "c4",
-        "c3",
-        "c2",
-        "c1"
+        "MNIT Jaipur",
+        "BITS Goa",
+        "IIT Roorkee",
+        "IIT Delhi",
+        "IIT Mumbai",
+        "MNNIT Allahabad",
+        "NIT Warangal",
+        "NIT Calicut"
         ];
 ?>
 <h2>Search By College</h2>

@@ -31,7 +31,7 @@
                 $sql = "SELECT * FROM items WHERE item_name LIKE '%".$q."%' OR description LIKE '%".$q."%'
                 OR category LIKE '%".$q."%' OR college LIKE'%".$q."%'";
             }
-            else if (isset($arguments['category'])) {
+            else if (isset($arguments['category']) && $arguments['category'] != "all") {
                 $category = $arguments['category'];
                 $sql = "SELECT * FROM items WHERE category='".$category."'";
             }
