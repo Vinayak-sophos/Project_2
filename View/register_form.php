@@ -137,10 +137,21 @@ select{
       <div id = "clg">College - </div>
       <div id = "clg1">
       <select name="college" style="margin-left:42%; margin-top:.5%; size=35;" required>
-        <option value="c1">Name1</option>
-        <option value="c2">Name2</option>
-        <option value="c3">Name3</option>
-        <option value="c4">Name4</option>
+        <?php
+          $colleges = [
+            "MNIT Jaipur",
+            "BITS Goa",
+            "IIT Roorkee",
+            "IIT Delhi",
+            "IIT Mumbai",
+            "MNNIT Allahabad",
+            "NIT Warangal",
+            "NIT Calicut"
+            ];
+            foreach($colleges as $college){
+        ?>
+        <option value="<?php echo $college; ?>"><?php echo $college; ?></option>
+        <?php } ?>
       </select>
       </div>
       <div id = "pass1">
