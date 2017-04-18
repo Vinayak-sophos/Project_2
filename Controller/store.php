@@ -103,8 +103,9 @@
         function deposit($arguments) {
             loadView('header_home', ["title" => "Deposit Money"]);
             if (isset($_POST['deposit'])) {
-                loadModel('personalize', 'deposit', $arguments);
-                redirect('store', 'home');
+                $_SESSION['post'] = $_POST;
+                header("Location: lib/phpcaptcha/demo.php");
+                exit();
             }
             else {
                 loadView('deposit');
