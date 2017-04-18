@@ -113,7 +113,7 @@ a{
     text-decoration : bold;
 }
 select{
-    width : 378%;
+    width : 170%;
     height : 30px;
     border-radius : 3px;
 }
