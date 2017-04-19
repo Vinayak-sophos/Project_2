@@ -4,6 +4,10 @@
   color : #fff;
   font-size : 2em;
 }
+#imagetext{
+  position : relative;
+  top : 50px;
+}
 #page1{
   width:100%;
   background : #111   no-repeat fixed center;
@@ -117,7 +121,7 @@ display:none;
   color: white;
 }
 .button6{
-  padding: 15px 74px;
+  padding: 15px 87px;
   background-color: #77f;
   color : #fff;
   top:-20px;

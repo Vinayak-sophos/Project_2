@@ -19,7 +19,7 @@ if(isset($_POST['Submit'])){
 
 ?>
 <meta charset="utf-8">
-<link href="./css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo(CSS_PATH); ?>style.css">
 <script type='text/javascript'>
 function refreshCaptcha(){
 	var img = document.images['captchaimg'];
@@ -46,11 +46,11 @@ function refreshCaptcha(){
         <br>
         <input id="captcha_code" name="captcha_code" type="text">
         <br>
-        Can't read the image? click <a href='javascript: refreshCaptcha();'>here</a> to refresh.</td>
+        <span id = "imagetext">Can't read the image? click <a href='javascript: refreshCaptcha();' style = "color : #f55">here</a> to refresh.</span></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input name="Submit" type="submit" onclick="return validate();" value="Submit" class="button1"></td>
+      <td><input name="Submit" type="submit" onclick="return validate();" value="Submit" class="button1 button" style = "position: relative;top:-45px;"></td>
     </tr>
   </table>
 </form>
